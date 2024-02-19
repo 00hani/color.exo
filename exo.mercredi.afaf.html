@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+      }
+      .inputContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .pwd {
+        position: relative;
+      }
+      i {
+        position: absolute;
+        top: 38px;
+        right: 15px;
+      }
+      input {
+        width: 400px;
+        padding: 16px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="inputContainer">
+        <label for="">user Name</label>
+        <input type="email" name="" id="email" />
+      </div>
+      <div class="pwd">
+        <div class="inputContainer">
+          <label for="">Password</label>
+          <input type="password" name="" id="pwd" />
+        </div>
+        <i class="bi bi-eye-slash"></i>
+      </div>
+      <input type="submit" value="Log In " />
+    </form>
+
+    <script>
+      const icon = document.querySelector("i");
+      console.log(icon);
+      const inputPassword = document.querySelector("#pwd");
+
+      icon.addEventListener("click", () => {
+        // get the type and checked if it is password or text
+        inputPassword.type == "password"
+          ? (inputPassword.type = "text")
+          : (inputPassword.type = "password");
+        // I need to change the icon ???
+        icon.classList.toggle("bi-eye");
+      });
+    </script>
+  </body>
+</html>

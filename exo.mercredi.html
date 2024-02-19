@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+      <div class="inputContainer">
+        <label for="">Enter a number : </label>
+        <input type="number" name="" id="" />
+        <button>Generate</button>
+      </div>
+      <div class="container"></div>
+
+      <script>
+        const input = document.querySelector("input");
+        const button = document.querySelector("button");
+        const container =
+          document.querySelector(".container") *
+          // add event lister to the button
+          button.addEventListener("click", () => {
+            let number = input.value;
+            console.log(number);
+            for (let i = 0; i < number; i++) {
+              // create boxes
+              let newBox = document.createElement("div");
+              newBox.textContent = i;
+              newBox.className = "box";
+              container.appendChild(newBox);
+            }
+          }) *
+          // event on the input
+          input.addEventListener("change", (event) => {
+            let number = Number(event.target.value);
+            for (let i = 0; i < number; i++) {
+              //  create boxes
+              let newBox = document.createElement("div");
+              newBox.textContent = i;
+              newBox.className = "box";
+              container.appendChild(newBox);
+            }
+          });
+
+        // keyboard
+      </script>
+    </body>
+  </body>
+</html>

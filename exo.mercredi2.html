@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+        padding-left: 600px;
+        padding-right: 600px;
+        gap: 10px;
+      }
+      .text {
+        padding-left: 90px;
+      }
+      .botton {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <h1 class="text">Sing In</h1>
+      <label for="">Username : </label>
+      <input type="email" name="" class="email" />
+      <label for="">PassWord : </label>
+      <input type="password" name="" class="password" />
+      <img src="./oeil.png" alt="" class="img1" />
+      <button class="botton">Log In</button>
+    </div>
+  </body>
+  <script>
+    const input1 = document.querySelector(".email");
+    const input2 = document.querySelector(".password");
+    const button = document.querySelector("button");
+
+    button.addEventListener("click", () => {
+      let valeur = input1.value;
+      let valeur2 = input2.value;
+    });
+  </script>
+</html>
